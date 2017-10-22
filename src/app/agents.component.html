@@ -1,0 +1,9 @@
+ <ul class="agents">
+   <li *ngFor="let agent of agents"
+   (click)="onSelect(agent)"
+   [class.selected]="agent === selectedAgent">
+     <span class="badge">{{agent.id}}</span>
+     {{agent.name}}
+   </li>    
+ </ul>
+ <agent-detail [agent]="selectedAgent"></agent-detail>

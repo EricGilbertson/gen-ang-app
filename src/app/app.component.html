@@ -1,13 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>Welcome to {{title}}</h1>
-  <ul class="agents">
-    <li *ngFor="let agent of agents"
-    (click)="onSelect(agent)"
-    [class.selected]="agent === selectedAgent">
-      <span class="badge">{{agent.id}}</span>
-      {{agent.name}}
-    </li>    
-  </ul>
-  <agent-detail [agent]="selectedAgent"></agent-detail>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/agents">Agents</a>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
