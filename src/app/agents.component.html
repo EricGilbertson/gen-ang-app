@@ -6,4 +6,7 @@
      {{agent.name}}
    </li>    
  </ul>
- <agent-detail [agent]="selectedAgent"></agent-detail>
+ <div *ngIf="selectedAgent">
+ <h2>{{selectedAgent.name | uppercase}} is my hero</h2>
+ <button (click)="gotoDetail()">View Details</button>
+ </div>

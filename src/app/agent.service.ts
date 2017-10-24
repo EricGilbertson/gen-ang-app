@@ -14,4 +14,7 @@ export class AgentService {
       }
     );
   }
+  getAgent(id: number): Promise<Agent> {
+    return this.getAgents().then(agents => agents.find(agent => agent.id === id));
+  }
 }
